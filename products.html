@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SerumAI - NeuPrism</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: white;
+      color: black;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #000;
+      z-index: 10;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    .subheading {
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+      margin-right: 15px;
+    }
+
+    .separator {
+      height: 30px;
+      width: 2px;
+      background-color: green;
+      margin-right: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+      padding: 8px 20px;
+      border-radius: 50px;
+      transition: all 0.4s ease;
+      position: relative;
+    }
+
+    nav a::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50px;
+      background-color: white;
+      transform: scale(0);
+      z-index: -1;
+      transition: transform 0.3s ease;
+    }
+
+    nav a:hover::before { transform: scale(1); }
+    nav a:hover { color: black; }
+    nav a:active { background-color: white; color: black; }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding-top: 120px;
+      padding-bottom: 20px;
+      min-height: 70vh;
+      justify-content: center;
+    }
+
+    .main-heading {
+      font-size: 87px;
+      font-weight: bold;
+      background: linear-gradient(270deg, #ff66cc, #9966ff, #66ccff);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+    }
+
+    .abbreviation {
+      font-size: 18px;
+      color: #444;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .description {
+      max-width: 680px;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 40px;
+    }
+
+    .explore-button {
+      padding: 12px 30px;
+      font-size: 16px;
+      border: none;
+      border-radius: 25px;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .explore-button:hover {
+      background-color: #0056b3;
+    }
+
+    .x1-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding-top: 20px;
+      padding-bottom: 100px;
+    }
+
+    .x1-heading {
+      font-size: 82px;
+      font-weight: bold;
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .x1-image {
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+      margin: 10px 0 10px 0;
+      border-radius: 10px;
+    }
+
+    .x1-abbreviation {
+      font-size: 18px;
+      color: #444;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="subheading">NeuPrism</div>
+      <div class="separator"></div>
+      <a href="homepage.html">Home</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="about.html">About Us</a>
+      <a href="careers.html">Careers</a>
+      <a href="products.html">Products</a>
+    </nav>
+  </header>
+
+  <!-- SerumAI Content -->
+  <div class="container">
+    <div class="main-heading">SerumAI</div>
+    <div class="abbreviation">Smart Enhanced Reactive Universal Machine (SERUM)</div>
+    <div class="description">
+      SerumAI is the next-gen AI model rivaling OpenAI GPT-4o, Claude 3.7, Grok 4 & other AI models. SerumAI redefines the boundaries of artificial intelligence by leveraging advanced techniques that require significantly less computational power and minimal data for training. Designed with efficiency and scalability in mind, it delivers state-of-the-art performance across diverse domains — all while being lightweight and resource-conscious. SerumAI isn't just powerful; it's practical, sustainable, and future-ready.
+    </div>
+    
+    <a href="explore.html" class="explore-button">Explore</a>
+
+    
+  </div>
+
+  <!-- X1-Humanoid Section -->
+  <div class="x1-section">
+    <div class="x1-heading">X1-Humanoid</div>
+    <img 
+      src="https://thumbs.dreamstime.com/b/d-rendering-humanoid-robot-full-body-white-background-robot-full-body-111685179.jpg?w=768" 
+      alt="X1 Humanoid Robot" 
+      class="x1-image"
+    >
+    <div class="x1-abbreviation">X1 - humanoid robot</div>
+    <div class="description">
+      Meet X1 humanoid robot which can perform everyday human tasks and even outperform in dangerous human activities during calamities.
+      It can work up to 8 hours per single charge and can be trained as a human. It has image recognition, voice recognition, and SerumAI inclusion.
+    </div>
+
+    <a href="explore.html" class="explore-button">Explore</a>
+
+    
+  </div>
+</body>
+</html>

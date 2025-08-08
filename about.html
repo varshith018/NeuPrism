@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us - NeuPrism</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* Sparkle background */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(white 1px, transparent 1px);
+      background-size: 20px 20px;
+      opacity: 0.1;
+      animation: sparkle 2s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes sparkle {
+      from { background-position: 0 0; }
+      to { background-position: 20px 20px; }
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #000;
+      z-index: 10;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    .subheading {
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+      margin-right: 15px;
+    }
+
+    .separator {
+      height: 30px;
+      width: 2px;
+      background-color: green;
+      margin-right: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+      padding: 8px 20px;
+      border-radius: 50px;
+      transition: all 0.4s ease;
+      position: relative;
+    }
+
+    nav a::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50px;
+      background-color: white;
+      transform: scale(0);
+      z-index: -1;
+      transition: transform 0.3s ease;
+    }
+
+    nav a:hover::before { transform: scale(1); }
+    nav a:hover { color: black; }
+    nav a:active { background-color: white; color: black; }
+
+    /* Section styles */
+    .section {
+      padding: 70px 60px 0;
+      text-align: center;
+    }
+
+    .section:first-of-type {
+      padding-top: 140px;
+    }
+
+    .section h2 {
+      font-size: 48px;
+      margin-bottom: 30px;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
+    .section:nth-of-type(1) h2 {
+      background-image: linear-gradient(90deg, lime, yellow, skyblue, lightgreen);
+    }
+
+    .section:nth-of-type(2) h2 {
+      background-image: linear-gradient(90deg, blue, pink, orange);
+    }
+
+    .section:nth-of-type(3) h2 {
+      background-image: linear-gradient(90deg, cyan, violet, orange);
+    }
+
+    .section p {
+      font-size: 20px;
+      line-height: 1.6;
+      max-width: 850px;
+      margin: 30px auto 60px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="subheading">NeuPrism</div>
+      <div class="separator"></div>
+      <a href="homepage.html">Home</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="about.html">About Us</a>
+      <a href="careers.html">Careers</a>
+      <a href="products.html">Products</a>
+    </nav>
+  </header>
+
+  <!-- Who We Are -->
+  <div class="section">
+    <h2>Who We Are</h2>
+    <p>
+      At NeuPrism, our team is dedicated to transforming human society through groundbreaking advancements in technology and engineering. Our mission is to address humanity's most pressing challenges by creating innovative products that simplify work, enhance efficiency, and profoundly improve lives. By leveraging cutting-edge robotics, artificial intelligence, and engineering solutions, we aim to empower individuals and communities, shaping a future where technology seamlessly integrates with human needs to foster progress, sustainability, and a better quality of life.
+    </p>
+  </div>
+
+  <!-- Our Mission -->
+  <div class="section">
+    <h2>Our Mission</h2>
+    <p>
+      Our mission is to create groundbreaking AI systems and intelligent robotics that are not only smarter and more capable than ever before, but also cost-effective and environmentally conscious. By leveraging advanced techniques that reduce reliance on massive datasets and compute power, and instead focus on efficient, reasoning-driven learning, we aim to make AI more accessible and sustainable. These technologies are designed to assist humans in everyday life, enable innovation, and build a future where intelligence and automation serve people and the planet responsibly.
+    </p>
+  </div>
+
+  <!-- Serving Towards Society -->
+  <div class="section">
+    <h2>Serving Towards Society</h2>
+    <p>
+      Our mission serves society by creating advanced AI and robotics that reduce the cost and complexity of development through smarter, reasoning-based techniques that rely on less data and computation. This shift not only makes AI more accessible and affordable across all sectors, but also significantly reduces energy consumption, fuel usage, and CO₂ emissions—contributing to a cleaner, greener planet. By minimizing overconsumption and building sustainable systems, we ensure that technological progress doesn’t come at the cost of the environment or economic inequality. Our intelligent systems empower individuals and communities to solve everyday problems, gain knowledge, and make better decisions, while reshaping critical sectors like healthcare, education, and transportation. Ultimately, we aim to foster a future where innovation is efficient, inclusive, and built on deep reasoning and ethical intelligence — helping society grow smarter, more sustainable, and future-ready.
+    </p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Careers | NeuPrism</title>
+  <style>
+    body {
+      background-color: #000;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px;
+      margin-top: 100px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #000;
+      z-index: 10;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    .subheading {
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+      margin-right: 15px;
+    }
+
+    .separator {
+      height: 30px;
+      width: 2px;
+      background-color: green;
+      margin-right: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+      padding: 8px 20px;
+      border-radius: 50px;
+      transition: all 0.4s ease;
+      position: relative;
+    }
+
+    nav a::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50px;
+      background-color: white;
+      transform: scale(0);
+      z-index: -1;
+      transition: transform 0.3s ease;
+    }
+
+    nav a:hover::before { transform: scale(1); }
+    nav a:hover { color: black; }
+    nav a:active { background-color: white; color: black; }
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 30px;
+      color: white;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-top: 40px;
+      color: white;
+      border-bottom: 2px solid white;
+      padding-bottom: 10px;
+    }
+
+    .job-listing {
+      background: #111;
+      border: 1px solid #444;
+      padding: 20px 30px;
+      border-radius: 10px;
+      margin: 15px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .job-title {
+      font-size: 22px;
+      color: white;
+      font-weight: 600;
+    }
+
+    .apply-btn {
+      background-color: white;
+      color: black;
+      padding: 10px 20px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      font-size: 16px;
+    }
+
+    .apply-btn:hover {
+      background-color: #00ff99;
+      color: black;
+    }
+
+    @media screen and (max-width: 600px) {
+      .job-listing {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .apply-btn {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ Shared Header (same as homepage) -->
+  <header>
+    <nav>
+      <div class="subheading">NeuPrism</div>
+      <div class="separator"></div>
+      <a href="homepage.html">Home</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="about.html">About Us</a>
+      <a href="careers.html">Careers</a>
+      <a href="products.html">Products</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <h1>Careers at NeuPrism</h1>
+
+  <h2>Management Roles</h2>
+  <div class="job-listing">
+    <div class="job-title">General Manager</div>
+    <a href="general-manager.html" class="apply-btn">Apply</a>
+  </div>
+  <div class="job-listing">
+    <div class="job-title">Business Development Manager</div>
+    <a href="business-development-manager.html" class="apply-btn">Apply</a>
+  </div>
+  <div class="job-listing">
+    <div class="job-title">Product Manager</div>
+    <a href="product-manager.html" class="apply-btn">Apply</a>
+  </div>
+
+  <h2>Financial Roles</h2>
+  <div class="job-listing">
+    <div class="job-title">Financial Analyst</div>
+    <a href="financial-analyst.html" class="apply-btn">Apply</a>
+  </div>
+  <div class="job-listing">
+    <div class="job-title">Grant and Funding Specialist</div>
+    <a href="grant-funding-specialist.html" class="apply-btn">Apply</a>
+  </div>
+  <div class="job-listing">
+    <div class="job-title">Bookkeeper/Accountant</div>
+    <a href="bookkeeper-accountant.html" class="apply-btn">Apply</a>
+  </div>
+  <div class="job-listing">
+    <div class="job-title">Investor Relations Specialist</div>
+    <a href="investor-relations-specialist.html" class="apply-btn">Apply</a>
+  </div>
+
+  <h2>Technical Roles</h2>
+  <div class="job-listing">
+    <div class="job-title">Robotics Engineer (Lead)</div>
+    <a href="robotics-engineer.html" class="apply-btn">Apply</a>
+  </div>
+  <div class="job-listing">
+    <div class="job-title">AI/Machine Learning Engineer</div>
+    <a href="ai-ml-engineer.html" class="apply-btn">Apply</a>
+  </div>
+  <div class="job-listing">
+    <div class="job-title">Software Engineer</div>
+    <a href="software-engineer.html" class="apply-btn">Apply</a>
+  </div>
+  <div class="job-listing">
+    <div class="job-title">Mechanical Engineer</div>
+    <a href="mechanical-engineer.html" class="apply-btn">Apply</a>
+  </div>
+  <div class="job-listing">
+    <div class="job-title">Embedded Systems Engineer</div>
+    <a href="embedded-systems-engineer.html" class="apply-btn">Apply</a>
+  </div>
+  <div class="job-listing">
+    <div class="job-title">Electrical Engineer</div>
+    <a href="electrical-engineer.html" class="apply-btn">Apply</a>
+  </div>
+  <div class="job-listing">
+    <div class="job-title">Computer Vision Engineer</div>
+    <a href="computer-vision-engineer.html" class="apply-btn">Apply</a>
+  </div>
+  <div class="job-listing">
+    <div class="job-title">Control Systems Engineer</div>
+    <a href="control-systems-engineer.html" class="apply-btn">Apply</a>
+  </div>
+  <div class="job-listing">
+    <div class="job-title">Test and Validation Engineer</div>
+    <a href="test-validation-engineer.html" class="apply-btn">Apply</a>
+  </div>
+  <div class="job-listing">
+    <div class="job-title">Data Engineer</div>
+    <a href="data-engineer.html" class="apply-btn">Apply</a>
+  </div>
+  <div class="job-listing">
+    <div class="job-title">UI/UX Designer (Technical Focus)</div>
+    <a href="ui-ux-designer.html" class="apply-btn">Apply</a>
+  </div>
+  <div class="job-listing">
+    <div class="job-title">Robotics Safety Engineer</div>
+    <a href="robotics-safety-engineer.html" class="apply-btn">Apply</a>
+  </div>
+</body>
+</html>

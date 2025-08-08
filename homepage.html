@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NeuPrism</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      overflow-x: hidden;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(white 1px, transparent 1px);
+      background-size: 20px 20px;
+      opacity: 0.24;
+      animation: sparkle 2s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes sparkle {
+      from { background-position: 0 0; }
+      to { background-position: 20px 20px; }
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #000;
+      z-index: 10;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    .subheading {
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+      margin-right: 15px;
+    }
+
+    .separator {
+      height: 30px;
+      width: 2px;
+      background-color: green;
+      margin-right: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+      padding: 8px 20px;
+      border-radius: 50px;
+      transition: all 0.4s ease;
+      position: relative;
+    }
+
+    nav a::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50px;
+      background-color: white;
+      transform: scale(0);
+      z-index: -1;
+      transition: transform 0.3s ease;
+    }
+
+    nav a:hover::before { transform: scale(1); }
+    nav a:hover { color: black; }
+    nav a:active { background-color: white; color: black; }
+
+    .main-heading {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 120px;
+      font-weight: bold;
+      background: linear-gradient(270deg, #ff66cc, #9966ff, #66ccff);
+      background-size: 1000% 1000%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+      animation: floatGradient 10s ease infinite;
+    }
+
+    @keyframes floatGradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .subtext {
+      position: absolute;
+      top: calc(45% + 100px);
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 18px;
+      font-weight: 400;
+      color: #ccc;
+      text-align: center;
+      width: 100%;
+    }
+
+    .message {
+      display: none;
+      animation: fadeInOut 3s ease-in-out forwards;
+    }
+
+    @keyframes fadeInOut {
+      0% { opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    .automation-inline {
+      position: absolute;
+      top: calc(45% + 100px + 3.3cm + 5cm);
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background-color: #2a2a2a;
+      border: 1px solid #666;
+      border-radius: 12px;
+      padding: 30px;
+      width: fit-content;
+    }
+
+    .automation-text {
+      font-size: 80px;
+      font-weight: bold;
+      color: white;
+      max-width: 50%;
+      text-align: left;
+    }
+
+    .automation-image {
+      width: 520px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .nextgen-heading {
+      margin-top: 35cm;
+      text-align: center;
+      font-size: 92px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .serumai-bottom {
+      margin-top: 3.2cm;
+      text-align: center;
+      font-size: 93px;
+      font-weight: bold;
+      background: linear-gradient(270deg, #ff66cc, #9966ff, #66ccff);
+      background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position: relative;
+      display: inline-block;
+      padding: 20px 50px;
+    }
+
+    .serumai-bottom::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 130%;
+      height: 160%;
+      background: radial-gradient(ellipse at center, rgba(200, 173, 22, 0.6) 0%, rgba(255,215,0,0.1) 60%, transparent 100%);
+      border-radius: 50%;
+      z-index: -1;
+      filter: blur(30px);
+      animation: glowPulse 3s infinite alternate ease-in-out;
+    }
+
+    @keyframes glowPulse {
+      from { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+      to { transform: translate(-50%, -50%) scale(1.1); opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      .main-heading { font-size: 60px; }
+      .automation-inline {
+        flex-direction: column;
+        top: calc(45% + 100px + 3.3cm + 9cm);
+      }
+      .automation-text, .automation-image {
+        max-width: 90%;
+        text-align: center;
+      }
+      .nextgen-heading { font-size: 32px; }
+      .serumai-bottom { font-size: 60px; }
+      .pryma-heading { font-size: 60px; }
+    }
+
+    .banner-container {
+      position: absolute;
+      top: calc(45% + 100px + 3.3cm);
+      left: 0;
+      display: flex;
+      gap: 20px;
+      animation: scrollBanner 40s linear infinite;
+      width: max-content;
+    }
+
+    .explore-btn {
+      display: inline-block;
+      margin-top: 35px;
+      background-color: #007bff;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: normal;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .explore-btn:hover {
+      background-color: #0069d9;
+    }
+
+    .banner-box {
+      padding: 12px 24px;
+      min-width: 240px;
+      border-radius: 12px;
+      background-color: #2a2a2a;
+      border: 1px solid #666;
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 22px;
+      font-weight: bold;
+      text-align: center;
+      position: relative;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+      color: white;
+    }
+
+    .banner-box:hover {
+      transform: scale(1.05);
+    }
+
+    .banner-box.serum span,
+    .banner-box.pryma span {
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .banner-box.serum span {
+      background-image: linear-gradient(270deg, #ff66cc, #9966ff, #66ccff);
+    }
+
+    .banner-box.pryma span {
+      background-image: linear-gradient(270deg, #f9f871, #ffb347, #ff6f91);
+    }
+
+    @keyframes scrollBanner {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* Pryma-H1 Section */
+    .pryma-section {
+      margin-top: 5cm;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      padding: 30px;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .pryma-text {
+      max-width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .pryma-heading {
+      font-size: 93px;
+      font-weight: bold;
+      background-image: linear-gradient(270deg, #f9f871, #ffb347, #ff6f91);
+      background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .pryma-subheading {
+      margin-top: 1cm;
+      font-style: italic;
+      font-size: 22px;
+      color: #ccc;
+    }
+
+    .pryma-image {
+      width: 520px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    /* Footer Styles */
+    footer {
+      border-top: 1px solid #444;
+      margin: 1cm auto 0 auto;
+      padding: 20px;
+      font-size: 14px;
+      color: #aaa;
+      line-height: 1.6;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      max-width: 90%;
+    }
+
+    .footer-left, .footer-right {
+      max-width: 45%;
+    }
+
+    .footer-center {
+      flex-basis: 100%;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="subheading">NeuPrism</div>
+      <div class="separator"></div>
+      <a href="homepage.html">Home</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="about.html">About Us</a>
+      <a href="careers.html">Careers</a>
+      <a href="products.html">Products</a>
+    </nav>
+  </header>
+
+  <div class="main-heading">NeuPrism</div>
+
+  <div class="subtext">
+    <div class="message" id="msg1">Shaping the Future of Artificial Intelligence</div>
+    <div class="message" id="msg2">Pioneering the Next Wave of Robotics</div>
+    <div class="message" id="msg3">Engineering Tomorrow's Technology Today</div>
+  </div>
+
+  <div class="banner-container">
+    <a href="products.html" class="banner-box serum"><span>SerumAI</span></a>
+    <a href="products.html" class="banner-box">X1-Humanoid</a>
+    <a href="explore.html" class="banner-box pryma"><span>Pryma-H1</span></a>
+    <a href="explore.html" class="banner-box">Co-Bots</a>
+    <a href="explore.html" class="banner-box">S1-Deployer</a>
+    <a href="products.html" class="banner-box serum"><span>SerumAI</span></a>
+    <a href="products.html" class="banner-box">X1-Humanoid</a>
+    <a href="explore.html" class="banner-box pryma"><span>Pryma-H1</span></a>
+    <a href="explore.html" class="banner-box">Co-Bots</a>
+    <a href="explore.html" class="banner-box">S1-Deployer</a>
+  </div>
+
+  <div class="automation-inline">
+    <div class="automation-text">Redefining Future of Automation</div>
+    <img class="automation-image" src="https://img.freepik.com/premium-photo/robot-arms-warehouse-preparing-boxes-delivery-conveyor-belt_89286-12494.jpg" alt="Automation Image">
+  </div>
+
+  <div class="nextgen-heading">Meet Next-gen AI</div>
+
+  <div style="text-align:center;">
+    <div class="serumai-bottom">SerumAI</div>
+    <div style="margin-top:2.4cm; font-style:italic; font-size:22px; color:#ccc;">Smart Enhanced Reactive Universal Machine</div>
+    <a href="products.html" class="explore-btn">explore</a>
+  </div>
+
+  <!-- Updated Pryma-H1 Section -->
+  <div class="pryma-section">
+    <div class="pryma-text">
+      <div class="pryma-heading">Pryma-H1</div>
+      <div class="pryma-subheading">The Neural Chip</div>
+      <a href="explore.html" class="explore-btn">explore</a>
+    </div>
+    <img class="pryma-image" src="https://th.bing.com/th/id/R.49084ac86512ea9a5338803a7bb91417?rik=mFyOwynn0bWgTg&riu=http%3a%2f%2fstateimpact.npr.org%2ftexas%2ffiles%2f2013%2f07%2fchip.jpeg&ehk=IdXylOokv3o9miGtTaX0ji%2fHJJMUANsrGhcYdFSu3lg%3d&risl=&pid=ImgRaw&r=0" alt="Pryma-H1 Neural Chip">
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-left">
+      <p>South Kensington<br>Exhibition Road<br>London<br>UK</p>
+    </div>
+    <div class="footer-right">
+      <p>Reach us at: contact.neuprism@gmail.com</p>
+    </div>
+    <div class="footer-center">
+      <p>© 2025 NeuPrism. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const messages = document.querySelectorAll(".message");
+    let index = 0;
+    function showNextMessage() {
+      messages.forEach((msg) => { msg.style.display = "none"; });
+      const currentMessage = messages[index];
+      currentMessage.style.display = "block";
+      currentMessage.style.animation = "fadeInOut 3s ease-in-out forwards";
+      index = (index + 1) % messages.length;
+    }
+    showNextMessage();
+    setInterval(showNextMessage, 3000);
+  </script>
+</body>
+</html>

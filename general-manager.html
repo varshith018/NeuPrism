@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>General Manager | Careers at NeuPrism</title>
+  <style>
+    body {
+      background-color: #000;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px;
+      margin-top: 120px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #000;
+      z-index: 10;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    .subheading {
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+      margin-right: 15px;
+    }
+
+    .separator {
+      height: 30px;
+      width: 2px;
+      background-color: green;
+      margin-right: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+      padding: 8px 20px;
+      border-radius: 50px;
+      transition: all 0.4s ease;
+      position: relative;
+    }
+
+    nav a::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50px;
+      background-color: white;
+      transform: scale(0);
+      z-index: -1;
+      transition: transform 0.3s ease;
+    }
+
+    nav a:hover::before { transform: scale(1); }
+    nav a:hover { color: black; }
+    nav a:active { background-color: white; color: black; }
+
+    h1 {
+      color: white;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin-top: 30px;
+      font-size: 24px;
+      border-bottom: 1px solid #fff;
+      padding-bottom: 5px;
+    }
+
+    p {
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+
+    ul {
+      margin: 10px 0 20px 20px;
+    }
+
+    .note {
+  font-style: italic;
+  color: #ffcc00;
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+
+    .location {
+      font-weight: bold;
+      color: white;
+      margin-top: 5px;
+    }
+
+    .form-section {
+      margin-top: 50px;
+      padding: 30px;
+      border: 1px solid #444;
+      background-color: #111;
+      border-radius: 12px;
+    }
+
+    .form-section h3 {
+      font-size: 22px;
+      margin-bottom: 20px;
+      color: #00ffcc;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      background: #222;
+      color: white;
+    }
+
+    input[type="file"] {
+      background: none;
+    }
+
+    button {
+      margin: 20px auto 10px;
+      display: block;
+      padding: 12px 30px;
+      background-color: #00ff99;
+      color: black;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: white;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .success {
+      color: white;
+      font-size: 16px;
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="subheading">NeuPrism</div>
+      <div class="separator"></div>
+      <a href="homepage.html">Home</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="about.html">About Us</a>
+      <a href="careers.html">Careers</a>
+      <a href="products.html">Products</a>
+    </nav>
+  </header>
+  <h1>General Manager</h1>
+  <p><strong>Role:</strong> Oversee operations, strategy, and team coordination to drive the startup’s mission.</p>
+
+  <h2>Qualifications</h2>
+  <ul>
+    <li>Bachelor’s/Master’s in Business Administration or Engineering</li>
+    <li>10+ years leadership in tech/robotics startups</li>
+    <li>Proven scaling operations and managing teams</li>
+  </ul>
+
+  <h2>Additional Qualifications</h2>
+  <ul>
+    <li>MBA or technical advanced degree</li>
+    <li>Robotics/AI industry experience</li>
+    <li>Strong London tech network</li>
+  </ul>
+
+  <h2>Experience</h2>
+  <ul>
+    <li>Leadership in high-growth startups</li>
+    <li>Strategic planning and fundraising</li>
+  </ul>
+
+  <h2>Responsibilities</h2>
+  <ul>
+    <li>Define/execute strategic vision</li>
+    <li>Manage budgets, operations, teams</li>
+    <li>Build investor/client partnerships</li>
+    <li>Foster mission-driven culture</li>
+  </ul>
+
+  <p><strong>Salary:</strong><br>GBP £120,000–£180,000 PA / USD $152,400–$228,600 PA</p>
+  
+ <p class="location">Location: London, UK</p>
+  <p class="note">*Additional strict queries are made in interview if shortlisted.</p>
+
+  <div class="form-section">
+    <h3>Submit Your Application</h3>
+
+<form action="https://formsubmit.co/banalavarshith992@gmail.com" method="POST" enctype="multipart/form-data" onsubmit="showMessage(event)">
+  
+  <!-- Required hidden FormSubmit settings -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_next" value="">
+
+  <!-- Your fields -->
+  <label>Full Name<span style="color: red">*</span></label>
+  <input type="text" name="name" required pattern="[A-Za-z\s]+" title="Text only">
+
+  <label>Email<span style="color: red">*</span></label>
+  <input type="email" name="email" required>
+
+  <label>Contact Number<span style="color: red">*</span></label>
+<input type="tel" name="phone" required pattern="^\+\d{1,15}$" title="Include country code (e.g. +91...)">
+<p class="note">Include country code (e.g. +91...)</p>
+
+
+
+  <label>Country<span style="color: red">*</span></label>
+<select name="country" required>
+  <option value="">Select your country</option>
+  <option value="Andorra">Andorra</option>
+  <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+  <option value="Argentina">Argentina</option>
+  <option value="Australia">Australia</option>
+  <option value="Austria">Austria</option>
+  <option value="Bahamas">Bahamas</option>
+  <option value="Barbados">Barbados</option>
+  <option value="Belgium">Belgium</option>
+  <option value="Brazil">Brazil</option>
+  <option value="Bulgaria">Bulgaria</option>
+  <option value="Canada">Canada</option>
+  <option value="Chile">Chile</option>
+  <option value="Costa Rica">Costa Rica</option>
+  <option value="Croatia">Croatia</option>
+  <option value="Cyprus">Cyprus</option>
+  <option value="Czech Republic">Czech Republic</option>
+  <option value="Denmark">Denmark</option>
+  <option value="Dominica">Dominica</option>
+  <option value="Estonia">Estonia</option>
+  <option value="Finland">Finland</option>
+  <option value="France">France</option>
+  <option value="Germany">Germany</option>
+  <option value="Greece">Greece</option>
+  <option value="Grenada">Grenada</option>
+  <option value="Hong Kong">Hong Kong</option>
+  <option value="Hungary">Hungary</option>
+  <option value="Iceland">Iceland</option>
+  <option value="India">India</option>
+  <option value="Ireland">Ireland</option>
+  <option value="Israel">Israel</option>
+  <option value="Italy">Italy</option>
+  <option value="Japan">Japan</option>
+  <option value="Kuwait">Kuwait</option>
+  <option value="Latvia">Latvia</option>
+  <option value="Lithuania">Lithuania</option>
+  <option value="Luxembourg">Luxembourg</option>
+  <option value="Malaysia">Malaysia</option>
+  <option value="Malta">Malta</option>
+  <option value="Mauritius">Mauritius</option>
+  <option value="Mexico">Mexico</option>
+  <option value="Monaco">Monaco</option>
+  <option value="Netherlands">Netherlands</option>
+  <option value="New Zealand">New Zealand</option>
+  <option value="Norway">Norway</option>
+  <option value="Oman">Oman</option>
+  <option value="Panama">Panama</option>
+  <option value="Poland">Poland</option>
+  <option value="Portugal">Portugal</option>
+  <option value="Qatar">Qatar</option>
+  <option value="Romania">Romania</option>
+  <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+  <option value="Saint Lucia">Saint Lucia</option>
+  <option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+  <option value="San Marino">San Marino</option>
+  <option value="Seychelles">Seychelles</option>
+  <option value="Singapore">Singapore</option>
+  <option value="Slovakia">Slovakia</option>
+  <option value="Slovenia">Slovenia</option>
+  <option value="South Korea">South Korea</option>
+  <option value="Spain">Spain</option>
+  <option value="Sweden">Sweden</option>
+  <option value="Taiwan">Taiwan</option>
+  <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+  <option value="United Arab Emirates">United Arab Emirates</option>
+  <option value="United kingdom">United kingdom</option>
+  <option value="United States">United States</option>
+  <option value="Uruguay">Uruguay</option>
+</select>
+
+  <label>Need Sponsored Visa?<span style="color: red">*</span></label>
+  <select name="visa_required" required>
+    <option value="">Select one</option>
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+  </select>
+
+  <label>Upload Photo (JPG/JPEG/PNG only)<span style="color: red">*</span></label>
+<input type="file" name="photo" accept=".jpg,.jpeg,.png" required>
+<p class="note">JPG/JPEG/PNG only (max 1MB)</p>
+
+<label>Upload Resume (PDF only)<span style="color: red">*</span></label>
+<input type="file" name="resume" accept=".pdf" required>
+<p class="note">PDF only (max 4MB)</p>
+  
+  <!-- Submit Button -->
+  <br><br>
+  <button type="submit" style="display: block; margin: auto;">Submit</button>
+
+</form>
+
+<!-- Friendly Message -->
+<div id="success-message" style="color: white; text-align: center; margin-top: 20px; display: none;">
+  Your application has been submitted successfully
+</div>
+
+<!-- Script to show message -->
+<script>
+  function showMessage(event) {
+    event.preventDefault(); // stop default behavior
+    const form = event.target;
+
+    // Submit form manually
+    fetch(form.action, {
+      method: form.method,
+      body: new FormData(form)
+    })
+    .then(response => {
+      if (response.ok) {
+        document.getElementById("success-message").style.display = "block";
+        form.reset(); // clear form fields
+      } else {
+        alert("There was an error. Please try again.");
+      }
+    })
+    .catch(error => {
+      alert("Network error. Please try again.");
+      console.error(error);
+    });
+  }
+</script>
+
+
+
+</div>
+
+  </div>
+
+  <script>
+    const form = document.getElementById("applicationForm");
+    const successDiv = document.getElementById("successMessage");
+    const errorDiv = document.getElementById("errorMessage");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      errorDiv.textContent = "";
+      successDiv.textContent = "";
+
+      const formData = new FormData(form);
+      fetch("https://formsubmit.co/banalavarshith992@gmail.com", {
+        method: "POST",
+        body: formData
+      })
+      .then(response => {
+        if (response.ok) {
+          successDiv.textContent = "Your application has been submitted successfully.";
+          form.reset();
+        } else {
+          throw new Error("Submission failed. Please try again.");
+        }
+      })
+      .catch(error => {
+        errorDiv.textContent = error.message;
+      });
+    });
+  </script>
+</body>
+</html>
